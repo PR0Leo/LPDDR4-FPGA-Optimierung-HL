@@ -1,0 +1,121 @@
+\chapter{Einleitung}
+\section{Motivation}
+Künstliche Intelligenz, Künstliche Intelligenz – kaum ein Begriff prägt die technologische Landschaft der Gegenwart so sehr wie dieser. Der KI-Server-Markt erreichte 2024 ein Volumen von 128 Milliarden US-Dollar und wächst mit einer jährlichen Rate von 28,2 \%, während Technologiegiganten 2024 kollektiv 217 Milliarden US-Dollar in KI-Rechenzentren investierten – prognostiziert auf 650 Milliarden US-Dollar bis 2026. Diese exponentielle Nachfrage absorbiert massive Mengen an Halbleitermaterialien, insbesondere DRAM-Speicherchips, die für die Verarbeitung neuronaler Netze unverzichtbar sind.
+
+Die Folgen dieser Umverteilung zeigen sich exemplarisch bei LPDDR4: Samsung stellte im April 2026 bekannt, die LPDDR4-Produktion bis Ende 2026 einzustellen und Fertigungslinien auf LPDDR5 umzurüsten. Beide Technologien benötigen dieselben kritischen Materialien – hochreines Silizium, Seltene Erden, Kupfer und spezielle Dielektrika – wobei die KI-Industrie durch höhere Margen etablierte Produktsegmente verdrängt. Diese Arbeit untersucht die technischen und wirtschaftlichen Implikationen dieser Entwicklung für die Elektrotechnik.
+
+Diese Marktdynamik unterstreicht die zunehmende Bedeutung einer robusten und effizienten Hardware-Implementierung bestehender LPDDR4-Systeme. Da die Verfügbarkeit von LPDDR4-Komponenten sinkt und gleichzeitig die Anforderungen an Zuverlässigkeit und Lebensdauer industrieller Anwendungen steigen, gewinnt die optimale Auslegung der Speicherinterface-Signalpfade an kritischer Relevanz. Jede Fehlanpassung im Layout kann zu Signalintegritätsproblemen führen, die im Worst-Case-Betriebsbereich Systemausfälle verursachen – ein Risiko, das angesichts der knapper werdenden Bauteile nicht akzeptabel ist.
+\section{Zielsetzung und Aufgabenstellung}
+Vor diesem Hintergrund beschäftigt sich diese Arbeit mit der Simulation und Optimierung des FPGA–LPDDR4-Interface-Layouts zur Sicherstellung der Signalintegrität im Worst-Case-Betriebsbereich mit HyperLynx. Im Zentrum steht dabei ein herstellerübergreifender Ansatz: Anstatt das Layout auf die elektrischen Charakteristika eines einzelnen LPDDR4-Speicherbausteins auszulegen, ermöglicht die Simulation mit HyperLynx die gleichzeitige Berücksichtigung mehrerer Herstellerparameter. Durch die Integration von IBIS-Modellen unterschiedlicher Produzenten in eine gemeinsame Simulationsumgebung kann ein universell kompatibles Layout entwickelt werden, das Signalintegritätsanforderungen unabhängig von der finalen Bauteilquelle erfüllt.
+
+Um die methodische Vorgehensweise dieser Arbeit nachvollziehbar zu gestalten, werden im Folgenden die zentralen Fachbegriffe der These – FPGA, LPDDR4-Interface, Hyperlynx Signalintegrität im Worst-Case-Betriebsbereich und Layout – detailliert erläutert, um die technische Grundlage der durchgeführten Untersuchungen zu verdeutlichen.
+\section{Definition zentraler Fachbegriffe}
+\subsection{Field Programmable Gate Array (FPGA)}
+
+Ein FPGA (Field Programmable Gate Array) ist ein benutzerdefinierter Prozessor, dessen Hardware-Architektur nach der Fertigung frei konfigurierbar bleibt. Im Gegensatz zu fest verdrahteten Mikroprozessoren bestehen FPGAs aus einem Array programmierbarer Logikblöcke, die durch ein flexibles Routing-Netzwerk verbunden werden. Diese Struktur ermöglicht es Entwicklern, digitale Schaltungen maßgeschneidert auf spezifische Anwendungsanforderungen auszulegen – von einfachen Steuerlogiken bis hin zu komplexen Signalverarbeitungssystemen. Durch diese Flexibilität finden FPGAs breite Anwendung in Bereichen, wo hohe Rechenleistung bei gleichzeitig geringer Latenz gefordert ist.
+
+\subsection{LPDDR4-Speicher}
+
+Um die durch den FPGA verarbeiteten Daten zwischenzuspeichern und bei Bedarf schnell abrufen zu können, ist ein externer Arbeitsspeicher unerlässlich. Hier kommt LPDDR4 (Low Power Double Data Rate 4) zum Einsatz – ein energieeffizienter DRAM-Speichertyp, der speziell für mobile und platzbeschränkte Anwendungen entwickelt wurde. LPDDR4 überträgt Daten bei jeder Taktflanke (Double Data Rate), wodurch bei gleicher Taktfrequenz die doppelte Datenrate im Vergleich zu Single-Data-Rate-Speichern erreicht wird. Die Schnittstelle zwischen FPGA und LPDDR4 stellt somit eine kritische Verbindung dar, deren elektrische Eigenschaften maßgeblich die Systemleistung beeinflussen.
+\subsection{HyperLynx-Simulation}
+
+Um die Zuverlässigkeit dieser Schnittstelle (engl. \textit{Interface}) sicherzustellen, wird mittels virtueller Modelle in HyperLynx eine Simulation durchgeführt. HyperLynx von Siemens ist eine etablierte Softwarelösung zur Signal- und Power-Integrity-Analyse, die es ermöglicht, PCB-Layouts bereits in der Entwurfsphase auf potenzielle Probleme zu untersuchen. Durch die Integration von IBIS-Modellen (\textit{Input/Output Buffer Information Specification}) verschiedener Speicherhersteller können elektrische Charakteristika wie Impedanz, Laufzeiten und Reflexionen präzise berechnet werden, ohne physische Prototypen fertigen zu müssen. Auf die technischen Details dieser IBIS-Modelle sowie auf die detaillierten Simulationsparameter wird im weiteren Verlauf dieses Berichts genauer eingegangen. Dieser simulationsgestützte Ansatz reduziert Entwicklungszeit und Kosten erheblich
+
+\subsection{Signalintegrität (SI)}
+
+Gegenstand der Simulation ist die Signalintegrität (SI – Signal Integrity), welche die Qualität elektrischer Signale während der Übertragung beschreibt. SI umfasst Aspekte wie Signalübersprechen (Crosstalk), Reflexionen an Impedanzsprüngen, Laufzeitverzögerungen sowie Rauscheinflüsse. Eine hohe Signalintegrität gewährleistet, dass digitale Signale ihren Zielbaustein unverfälscht erreichen und korrekt interpretiert werden. Bei Hochgeschwindigkeitsschnittstellen wie LPDDR4 mit Datenraten im Gigabit-Bereich können bereits minimale Layoutabweichungen zu Bitfehlern und Systeminstabilitäten führen. Auf die physikalischen Effekte sowie die konkreten Bewertungskriterien dieser Signalintegritätsaspekte wird im weiteren Verlauf dieses Berichts genauer eingegangen.
+
+\subsection{Worst-Case-Betriebsbedingungen}
+% Abschnitt Anpassen
+Der Worst-Case-Betriebsbereich definiert die extremsten zulässigen Bedingungen, unter denen ein System noch fehlerfrei funktionieren muss. In HyperLynx wird dieser Bereich durch gleichzeitige Variation von Temperatur (-40 °C bis +85 °C), Versorgungsspannung (±10 \%) und Prozessstreuungen simuliert. Die Taktfrequenz ist dabei frei wählbar, wobei die Signalintegritäts-Margins mit steigender Frequenz typischerweise abnehmen. Daher wird das Layout zunächst auf der maximal möglichen Frequenz ausgelegt, um ausreichende Reserven zu schaffen. Als Obergrenze dient die niedrigere der beiden maximalen Frequenzen aus den Datenblättern: Während der LPDDR4-Speicher (Alliance Memory AS4CxxxMD4) eine maximale Clock-Frequenz von 1600 MHz (3200 Mbps) unterstützt \textbf{(füge Link ein: Datenblatt frequenz angeben)}, limitiert der Zynq UltraScale+ Memory Controller in der -1 Speed Grade auf 2400 Mbps (1200 MHz) \textbf{(füge Link ein: Datenblatt Zynq frequenz angabe, Speed Grade -1?)} Somit wird das Design bei 2400 Mbs optimiert und abschließend bei der tatsächlichen Betriebsfrequenz validiert, um sicherzustellen, dass alle Signalintegritäts-Kriterien auch unter realen Bedingungen eingehalten werden.
+Alliance Memory: "2Gb/4Gb/8Gb LPDDR4 Datasheet", Rev. 1.1, Mar. 2021, S. 2-3.
+AMD: "Zynq UltraScale+ MPSoC Data Sheet: Overview", DS891 v1.11.1, Mar. 2025, S. 15.
+
+\subsection{Untersuchtes PCB-Layout}
+
+Das in dieser Arbeit untersuchte Leiterplatten-Design (Printed Circuit Board, PCB) wurde mit der CAD-Software Mentor Xpedition von Siemens erstellt. Mentor Xpedition ist eine etablierte Lösung für komplexe PCB-Entwürfe und bietet umfassende Funktionen für Stackup-Definition, Routing und Design-Rule-Checking (DRC). Das Layout umfasst die Platzierung des Zynq UltraScale+ FPGA, der LPDDR4-Speicherbausteine sowie aller passiven und aktiven Komponenten. Eine detaillierte Darstellung des vollständigen PCB-Layouts mit allen relevanten Signalpfaden befindet sich in Anhang A (siehe Abbildung A.1).
+
+Das zuvor beschriebene PCB-Layout bildet die physische Grundlage für die elektrische Verbindung zwischen FPGA und LPDDR4-Speicher. Um die Anforderungen an dieses Layout nachvollziehbar zu gestalten, werden im folgenden Kapitel die technischen Grundlagen der FPGA-LPDDR4-Schnittstelle erläutert. Diese umfassen die wesentlichen Signalgruppen sowie die Kriterien zur Bewertung der Signalqualität.
+
+\chapter{Technische Grundlagen der FPGA–LPDDR4-Schnittstelle}
+
+Die Schnittstelle zwischen FPGA und LPDDR4-Speicher besteht aus mehreren koordinierten Signalgruppen, die gemeinsam einen zuverlässigen Datentransfer gewährleisten. Im Überblick umfasst das System die Taktleitung (Clock), die Daten-Strobe-Signale, die Adress- und Befehlsleitungen (Address/Command) sowie die Bewertungskriterien zur Signalintegrität in Form von Eye-Mask-Diagrammen. Jede dieser Komponenten erfüllt eine spezifische Funktion im Datenübertragungsprozess und unterliegt eigenen elektrischen Anforderungen.
+% Datenblatt Ballout Bild und Übergang Clock, DQ...
+
+\subsection{Taktsignal (Clock)}
+
+Der Clock ist das zentrale Synchronisationssignal der Schnittstelle. LPDDR4 verwendet einen differenziellen Takt ($CK_t$ und $CK_c$), der sowohl steigende als auch fallende Flanken zur Datenübertragung nutzt (Double Data Rate). Der Takt referenziert alle Command-, Address- und Write-Operationen. Eine minimale Taktjitter-Toleranz ist entscheidend, da Timing-Abweichungen direkt die verfügbaren Setup- und Hold-Zeiten der Datenleitungen beeinflussen. Eine detaillierte Betrachtung dieser Setup- und Hold-Zeiten erfolgt in Kapitel \textbf{(Titel des Kapitels).}
+
+\subsection{Daten-Strobe-Signale (DQS)}
+
+Die differenziellen Daten-Strobe-Signale ($DQS\_t$ / $DQS\_c$) stellen die zeitliche Phasenreferenz für das Abtasten der Datenleitungen ($DQ$) bereit. Zur Gewährleistung maximaler Timing-Margen unterscheidet sich die Phasenbeziehung zwischen $DQS$ und $DQ$ je nach Zugriffsrichtung grundlegend (siehe Abbildung 1):
+
+\begin{itemize}
+\item \textbf{Lesezugriff (\textit{Read}):} Der Speicherbaustein treibt das $DQS$-Signal flankenbündig (\textit{edge-aligned}) zu den Daten. Die Signalflanken von $DQS$ fallen exakt mit den Zustandswechseln der $DQ$-Leitungen zusammen. Die empfängerseitige Logik (z. B. im FPGA) verschiebt $DQS$ intern über eine \textit{Delay-Locked Loop} (DLL) um 90°, um die Daten mittig im Datenauge abzutasten.
+
+\item \textbf{Schreibzugriff (\textit{Write}):} Der Treiber (FPGA) gibt das $DQS$-Signal bereits um 90° phasenverschoben (\textit{center-aligned}) bezüglich der $DQ$-Daten aus. Die Flanken von $DQS$ treffen zentriert im gültigen Datenfenster beim Speicher ein, was die Setup- und Hold-Zeiten maximiert.
+\end{itemize}
+
+Aufgrund dieser bidirektionalen Topologie erfordert das $DQS$-$DQ$-Bündel im PCB-Layout eine strikte Leitungsimpedanz sowie ein präzises Laufzeit-Matching (\textit{Skew}-Minimierung).
+\subsection{Command- und Adressbus (CA)}
+
+Damit Daten gezielt im LPDDR4-Speicher abgelegt oder ausgelesen werden können, benötigt jeder Zugriff eine exakte Zieladresse innerhalb des Speichers. Diese Speicheradresse gliedert sich hierarchisch in Bänke, Zeilen (\textit{Rows}) und Spalten (\textit{Columns}). Über die unidirektionalen Command/Address-Leitungen (CA) übermittelt der Speichercontroller (z. B. auf dem FPGA) diese Adressinformationen zusammen mit den eigentlichen Steuerbefehlen an den Speicherbaustein.
+
+Um den Platzbedarf auf dem Chip und die Anzahl der Leitungsspuren auf der Leiterplatte drastisch zu reduzieren, wird die Adresse nicht als ein einzelnes, breites Parallelsignal übertragen. Stattdessen nutzt LPDDR4 ein Zeitmultiplexverfahren: Die Gesamtinformation wird auf wenige CA-Leitungen aufgeteilt und sequenziell über mehrere Taktflanken hinweg gesendet. Der integrierte Befehlsdekoder im LPDDR4-Speicher empfängt diese zeitlich versetzten Teilsignale und führt sie intern wieder zur vollständigen Zieladresse zusammen. Durch diese Multiplexierung lässt sich eine erhebliche Pin- und Bauraumersparnis erzielen, was jedoch eine präzise Einhaltung der Timing-Spezifikationen voraussetzt, damit der Speicher die Datenpakete fehlerfrei dekodieren kann
+\subsection{Schreibmaske (Write Mask)}
+
+Bei der LPDDR4-Schnittstelle werden Daten parallel als Block übertragen – typischerweise 16 Byte pro Schreibzugriff bei einer x32-Organisation. Um jedoch kleinere Dateneinheiten innerhalb dieses Blocks adressieren zu können, wird zusätzlich eine Write Mask (DM-Signal) übertragen. Diese Maske gibt für jedes Byte im Datenblock an, ob es tatsächlich in den Speicher geschrieben werden soll oder nicht. Beispielsweise kann durch Setzen der entsprechenden Mask-Bits nur der erste Byte aktualisiert werden, während die restlichen 15 Byte des Blocks unverändert bleiben. Diese Funktionalität ermöglicht effiziente Teilzugriffe auf den Speicher, ohne dass gesamte Blöcke ausgelesen, modifiziert und zurückgeschrieben werden müssen
+\subsection{Bewertung der Signalqualität mit dem Eye-Mask-Diagramm}
+
+Das Eye-Mask-Diagramm ist ein zentrales Bewertungswerkzeug zur Quantifizierung der Signalintegrität bei Hochgeschwindigkeitsschnittstellen. Es entsteht durch die Überlagerung vieler Bitperioden eines Signals in einem Oszilloskop oder einer Simulation. Die resultierende „Augenöffnung" visualisiert die verfügbare Spannungs- und Timing-Marge für eine fehlerfreie Signalabtastung.
+
+% (füge Link ein: Bild von eigener Simulation mit Eye Diagram) Schreibe den Absatz passend zum Bild
+
+Die \textbf{Eye-Mask} definiert einen verbotenen Bereich innerhalb des Augendiagramms, den das Signal nicht durchdringen darf. Diese Maske wird typischerweise aus den Spezifikationen des Speicherstandards (JEDEC) oder den Anforderungen des FPGA-Herstellers abgeleitet. Ein Signal, das die Eye-Mask verletzt, weist unzureichende Margen auf und kann zu Bitfehlern führen. In HyperLynx wird die Eye-Mask-Analyse verwendet, um Layout-Optimierungen zu validieren und sicherzustellen, dass das Design auch im Worst-Case-Betriebsbereich konform bleibt.
+
+\chapter{Konfiguration der HyperLynx-DDR-Simulation}
+In Siemens HyperLynx (LineSim und BoardSim) steht ein breites Spektrum an Grundfunktionen zur Analyse der Signalintegrität (SI) zur Verfügung. Nach der Konstruktion und Extraktion von Übertragungsstrecken lassen sich die Signaleigenschaften über das integrierte virtuelle Oszilloskop detailliert untersuchen. Dazu gehören die Generierung von Augendiagrammen (Eye Diagrams), die Erfassung von Übersprechen (Crosstalk) sowie die Ermittlung transienter Signalantworten. Darüber hinaus erlaubt die Software die Modellierung differenzieller Signalpaare (Differential Pairs) und das Überlagern mehrerer Simulationsergebnisse im Oszilloskop-Viewer. Dadurch können unterschiedliche Leitungsabschlüsse (Terminations) manuell konstruiert und direkt miteinander vergleichend analysiert werden.
+
+Für umfassende Post-Layout-Simulationsabläufe ermöglicht die Schnittstelle zu Mentor (Siemens) Xpedition Layout den Export des vollständigen PCB-Layouts und dessen anschließenden Import in BoardSim. Dabei werden alle relevanten Leiterbahnparameter – wie Breiten, Längen sowie komplexe Kopplungseffekte – automatisch generiert und aus den Layoutdaten extrahiert.
+% ![[Pasted image 20260930123503.png]]
+Abbildung X gibt einen Überblick über die wesentlichen Reiter und Einstellungsmenüs, die für die Durchführung einer automatisierten DDR4-Simulation konfiguriert werden müssen. Die folgenden Abschnitte konzentrieren sich auf spezifische Konfigurationseigenschaften des DDRX Batch Wizards.
+
+\subsection{Integration der IBIS-Modelle}
+
+Das IBIS-Format (I/O Buffer Information Specification) stellt ein standardisiertes Modell zur Beschreibung des elektrischen Verhaltens von Ein-/Ausgangspuffern integrierter Schaltungen dar. Eine IBIS-Datei enthält dabei keine proprietären Schaltungsinformationen, sondern beschreibt das nichtlineare Verhalten der Puffer durch Spannungs-Strom-Kennlinien (V-I-Kurven), Schaltzeiten sowie Kapazitätswerte für verschiedene Prozess-, Temperatur- und Spannungsecken (Corners). Diese Informationen sind für eine präzise Simulation der Signalintegrität auf Leiterplattenebene essentiell.
+
+\textbf{Weitere Informationen zur IBIS-Modell-Zuweisung in HyperLynx finden sich im Siemens Support Forum [1].}
+IBIS-Modelle werden direkt von den Halbleiterherstellern bereitgestellt und müssen für die jeweiligen DRAM- und FPGA-Komponenten bei den Herstellern angefordert oder von deren Support-Portalen heruntergeladen werden [1]. Im Rahmen dieser Arbeit wurden IBIS-Modelle der folgenden Hersteller beschafft und in die Simulation integriert:
+
+\begin{itemize}
+\item \textbf{Xilinx Zynq} (FPGA/SoC-Plattform)
+\item \textbf{Integrated Silicon Solution Inc. (ISSI)} (DRAM-Hersteller)
+\item \textbf{Intelligent Memory} (DRAM-Hersteller)
+\end{itemize}
+
+Zur Validierung und Vergleichbarkeit der Simulationsergebnisse wurden zusätzlich IBIS-Daten von \textbf{Alliance Memory} herangezogen und die Simulationsergebnisse gegenübergestellt. Dieser herstellerübergreifende Ansatz gewährleistet eine Optimierung des Layouts. Dadurch wird die Auslegung des Layout für mehrere Hersteller möglich.
+
+\subsection{On-Die-Termination (ODT)}
+
+Die On-Die Termination (ODT) ist ein integriertes Abschlussnetzwerk innerhalb der DDR-Speicherbausteine selbst. Im Gegensatz zu externen Abschlusswiderständen auf der Leiterplatte kann ODT dynamisch während des Betriebs aktiviert oder deaktiviert werden, was insbesondere bei hohen Datenraten von Vorteil ist. Durch die Integration des Abschlusses direkt im Chip werden Reflexionen an der Last minimiert und die Signalqualität verbessert. In HyperLynx muss der ODT-Wert entsprechend dem Speichertyp und der Betriebsfrequenz konfiguriert werden, um realistische Simulationsbedingungen abzubilden. 
+
+% {Eine detaillierte Erläuterung zur ODT-Modellauswahl bietet das Siemens Support Forum [2].}
+
+\subsection{Zweiter Simulationsdurchlauf (Second Run)}
+
+Die Einstellung „Second Run" im HyperLynx DDRx-Batch-Wizard ermöglicht eine zweistufige Simulationsdurchführung. Im ersten Durchlauf werden grundlegende Signalintegritätsparameter analysiert, während der zweite Durchlauf eine verfeinerte Berechnung unter Berücksichtigung von gekoppelten Effekten wie Nebensprechen (Crosstalk) zwischen benachbarten Leitungen durchführt. Diese Option ist insbesondere bei hochdichten Leiterplattenlayouts mit engen Leiterabständen empfehlenswert, da hier Koppeleffekte einen signifikanten Einfluss auf die Signalqualität haben können. Durch den zweiten Durchlauf wird die Genauigkeit der Simulation erhöht, was jedoch mit einem längeren Berechnungsaufwand verbunden ist [3].
+
+\subsection{IC-Modell mit typischen Prozessecken (Typical Corners)}
+
+Die Einstellung „IC Model with Typical Corners" definiert, welche Prozess-Temperatur-Spannungs-Ecken (PVT-Corners) für die Simulation verwendet werden. IBIS-Modelle enthalten typischerweise Daten für drei Ecken: Minimum (langsamster Prozess, niedrigste Temperatur, niedrigste Spannung), Typical (typische Bedingungen) und Maximum (schnellster Prozess, höchste Temperatur, höchste Spannung). Die Auswahl von „Typical Corners" bedeutet, dass die Simulation unter nominalen Betriebsbedingungen durchgeführt wird. Diese Einstellung eignet sich für erste Designbewertungen und Routineanalysen. Für eine umfassende Robustheitsprüfung sollten jedoch zusätzlich die Min- und Max-Corners simuliert werden, um das Verhalten unter Worst-Case-Bedingungen zu verifizieren [3].
+
+\subsection{JEDEC-Standardisierung}
+
+Der JEDEC-Standard (Joint Electron Device Engineering Council) definiert die technischen Spezifikationen für Halbleiterspeicher, einschließlich Timing-Parametern, elektrischen Charakteristika, Signalpegeln und Protokollabläufen. Für LPDDR4-Speicher ist insbesondere der Standard JESD209-4B maßgeblich [4]. Die Einhaltung dieser Spezifikationen ist für die Interoperabilität zwischen Speichercontroller und DRAM-Bausteinen verschiedener Hersteller unerlässlich. HyperLynx integriert JEDEC-basierte Timing-Modelle, wodurch eine standardkonforme Simulation gewährleistet wird. Die Verifikation gegen JEDEC-Spezifikationen stellt sicher, dass das Design unter realen Betriebsbedingungen zuverlässig funktioniert und die geforderten Timing-Margen eingehalten werden.
+
+\chapter{Auswertung}
+Vorstellen der Ergebnisse
+Aufgetretene und behobene Fehler erläutern.
+\chapter{Schluss}
+Bewertung
+Reflexion
