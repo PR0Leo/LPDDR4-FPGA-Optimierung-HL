@@ -208,12 +208,43 @@
       \verb https://xilinx-wiki.atlassian.net/wiki/spaces/A/pages/747012338/UltraScale+UltraScale+MPSoC+DDR+Controller+Settings+and+IBIS+Simulation#Leveling-and-Calibration
       \endverb
     \endentry
+    \entry{pcbstore_jedec}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=6379fe8fc13bb37619b478c08b903e9c}{%
+           family={{PCBstore}},
+           familyi={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{6379fe8fc13bb37619b478c08b903e9c}
+      \strng{fullhash}{6379fe8fc13bb37619b478c08b903e9c}
+      \strng{fullhashraw}{6379fe8fc13bb37619b478c08b903e9c}
+      \strng{bibnamehash}{6379fe8fc13bb37619b478c08b903e9c}
+      \strng{authorbibnamehash}{6379fe8fc13bb37619b478c08b903e9c}
+      \strng{authornamehash}{6379fe8fc13bb37619b478c08b903e9c}
+      \strng{authorfullhash}{6379fe8fc13bb37619b478c08b903e9c}
+      \strng{authorfullhashraw}{6379fe8fc13bb37619b478c08b903e9c}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Glossar-Eintrag}
+      \field{title}{What is JEDEC? The Organization Behind Memory Standards}
+      \field{urlday}{29}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://pcbstore.com.bd/glossary/jedec
+      \endverb
+      \verb{url}
+      \verb https://pcbstore.com.bd/glossary/jedec
+      \endverb
+    \endentry
     \entry{nxp_lpddr4_guidelines}{manual}{}{}
       \list{organization}{1}{%
         {NXP Semiconductors}%
       }
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labeltitlesource}{title}
       \field{number}{UG10149}
       \field{title}{LPDDR4 Board Design and Layout Guidelines}
