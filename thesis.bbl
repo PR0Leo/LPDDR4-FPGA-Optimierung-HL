@@ -1,0 +1,231 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{spectrum_dram_shortage}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=23d1ecadf01f950e454bfecd012af157}{%
+           family={Spectrum},
+           familyi={S\bibinitperiod},
+           given={IEEE},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{23d1ecadf01f950e454bfecd012af157}
+      \strng{fullhash}{23d1ecadf01f950e454bfecd012af157}
+      \strng{fullhashraw}{23d1ecadf01f950e454bfecd012af157}
+      \strng{bibnamehash}{23d1ecadf01f950e454bfecd012af157}
+      \strng{authorbibnamehash}{23d1ecadf01f950e454bfecd012af157}
+      \strng{authornamehash}{23d1ecadf01f950e454bfecd012af157}
+      \strng{authorfullhash}{23d1ecadf01f950e454bfecd012af157}
+      \strng{authorfullhashraw}{23d1ecadf01f950e454bfecd012af157}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Online; abgerufen am 20. Oktober 2024}
+      \field{title}{DRAM Shortage and AI Impact}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://spectrum.ieee.org/dram-shortage
+      \endverb
+      \verb{url}
+      \verb https://spectrum.ieee.org/dram-shortage
+      \endverb
+    \endentry
+    \entry{digilent_fpga}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=e2b4a5847320f16617f60880b1151e53}{%
+           family={{Digilent Inc.}},
+           familyi={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{e2b4a5847320f16617f60880b1151e53}
+      \strng{fullhash}{e2b4a5847320f16617f60880b1151e53}
+      \strng{fullhashraw}{e2b4a5847320f16617f60880b1151e53}
+      \strng{bibnamehash}{e2b4a5847320f16617f60880b1151e53}
+      \strng{authorbibnamehash}{e2b4a5847320f16617f60880b1151e53}
+      \strng{authornamehash}{e2b4a5847320f16617f60880b1151e53}
+      \strng{authorfullhash}{e2b4a5847320f16617f60880b1151e53}
+      \strng{authorfullhashraw}{e2b4a5847320f16617f60880b1151e53}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Online-Ressource}
+      \field{title}{Field Programmable Gate Arrays Explained}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://files.digilent.com/reference/Field_Programmable_Gate_Arrays_Explained.pdf
+      \endverb
+      \verb{url}
+      \verb https://files.digilent.com/reference/Field_Programmable_Gate_Arrays_Explained.pdf
+      \endverb
+    \endentry
+    \entry{siemens_ddr_sim}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=dca8c041571bdf2a7857fa9add731507}{%
+           family={{Siemens Community}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{dca8c041571bdf2a7857fa9add731507}
+      \strng{fullhash}{dca8c041571bdf2a7857fa9add731507}
+      \strng{fullhashraw}{dca8c041571bdf2a7857fa9add731507}
+      \strng{bibnamehash}{dca8c041571bdf2a7857fa9add731507}
+      \strng{authorbibnamehash}{dca8c041571bdf2a7857fa9add731507}
+      \strng{authornamehash}{dca8c041571bdf2a7857fa9add731507}
+      \strng{authorfullhash}{dca8c041571bdf2a7857fa9add731507}
+      \strng{authorfullhashraw}{dca8c041571bdf2a7857fa9add731507}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Siemens EDA Support Forum}
+      \field{title}{DDR Simulation on Clock Enable and Measurement Location}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://community.sw.siemens.com/s/question/0D54O0000859slZSAQ/ddr-simulation-on-clock-enable-and-measurement-location
+      \endverb
+      \verb{url}
+      \verb https://community.sw.siemens.com/s/question/0D54O0000859slZSAQ/ddr-simulation-on-clock-enable-and-measurement-location
+      \endverb
+    \endentry
+    \entry{alliance_lpddr4_ds}{manual}{}{}
+      \list{organization}{1}{%
+        {Alliance Memory}%
+      }
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{note}{Datenblatt Spezifikation}
+      \field{title}{LPDDR4 SDRAM Datasheet (3200 Mbps / 1600 MHz)}
+    \endentry
+    \entry{xilinx_zynq_ds}{manual}{}{}
+      \list{organization}{1}{%
+        {Xilinx / Advanced Micro Devices, Inc.}%
+      }
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labeltitlesource}{title}
+      \field{note}{DS925}
+      \field{title}{Zynq UltraScale+ MPSoC Data Sheet: DC and AC Switching Characteristics (Speed Grade -1)}
+    \endentry
+    \entry{lpddr_notes}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=c776788fb41c166d6bb6e2113cf5b867}{%
+           family={Document},
+           familyi={D\bibinitperiod},
+           given={Scribd\bibnamedelima User},
+           giveni={S\bibinitperiod\bibinitdelim U\bibinitperiod}}}%
+      }
+      \strng{namehash}{c776788fb41c166d6bb6e2113cf5b867}
+      \strng{fullhash}{c776788fb41c166d6bb6e2113cf5b867}
+      \strng{fullhashraw}{c776788fb41c166d6bb6e2113cf5b867}
+      \strng{bibnamehash}{c776788fb41c166d6bb6e2113cf5b867}
+      \strng{authorbibnamehash}{c776788fb41c166d6bb6e2113cf5b867}
+      \strng{authornamehash}{c776788fb41c166d6bb6e2113cf5b867}
+      \strng{authorfullhash}{c776788fb41c166d6bb6e2113cf5b867}
+      \strng{authorfullhashraw}{c776788fb41c166d6bb6e2113cf5b867}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{LPDDR Notes and Write Mask Features}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://www.scribd.com/document/888023285/LPDDR-myNotes
+      \endverb
+      \verb{url}
+      \verb https://www.scribd.com/document/888023285/LPDDR-myNotes
+      \endverb
+    \endentry
+    \entry{ibis_faq}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=5ebf5ff2b0a6faca0674f1d7319b28d2}{%
+           family={{IBIS Open Forum}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{5ebf5ff2b0a6faca0674f1d7319b28d2}
+      \strng{fullhash}{5ebf5ff2b0a6faca0674f1d7319b28d2}
+      \strng{fullhashraw}{5ebf5ff2b0a6faca0674f1d7319b28d2}
+      \strng{bibnamehash}{5ebf5ff2b0a6faca0674f1d7319b28d2}
+      \strng{authorbibnamehash}{5ebf5ff2b0a6faca0674f1d7319b28d2}
+      \strng{authornamehash}{5ebf5ff2b0a6faca0674f1d7319b28d2}
+      \strng{authorfullhash}{5ebf5ff2b0a6faca0674f1d7319b28d2}
+      \strng{authorfullhashraw}{5ebf5ff2b0a6faca0674f1d7319b28d2}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{IBIS Frequently Asked Questions (FAQ)}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://ibis.org/faq/#_1
+      \endverb
+      \verb{url}
+      \verb https://ibis.org/faq/#_1
+      \endverb
+    \endentry
+    \entry{xilinx_ultrascale_sim}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=319fa2501b38a46469102b678a9e4338}{%
+           family={{Xilinx Wiki}},
+           familyi={X\bibinitperiod}}}%
+      }
+      \strng{namehash}{319fa2501b38a46469102b678a9e4338}
+      \strng{fullhash}{319fa2501b38a46469102b678a9e4338}
+      \strng{fullhashraw}{319fa2501b38a46469102b678a9e4338}
+      \strng{bibnamehash}{319fa2501b38a46469102b678a9e4338}
+      \strng{authorbibnamehash}{319fa2501b38a46469102b678a9e4338}
+      \strng{authornamehash}{319fa2501b38a46469102b678a9e4338}
+      \strng{authorfullhash}{319fa2501b38a46469102b678a9e4338}
+      \strng{authorfullhashraw}{319fa2501b38a46469102b678a9e4338}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{UltraScale MPSoC DDR Controller Settings and IBIS Simulation}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://xilinx-wiki.atlassian.net/wiki/spaces/A/pages/747012338/UltraScale+UltraScale+MPSoC+DDR+Controller+Settings+and+IBIS+Simulation#Leveling-and-Calibration
+      \endverb
+      \verb{url}
+      \verb https://xilinx-wiki.atlassian.net/wiki/spaces/A/pages/747012338/UltraScale+UltraScale+MPSoC+DDR+Controller+Settings+and+IBIS+Simulation#Leveling-and-Calibration
+      \endverb
+    \endentry
+    \entry{nxp_lpddr4_guidelines}{manual}{}{}
+      \list{organization}{1}{%
+        {NXP Semiconductors}%
+      }
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labeltitlesource}{title}
+      \field{number}{UG10149}
+      \field{title}{LPDDR4 Board Design and Layout Guidelines}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://docs.nxp.com/bundle/UG10149/page/topics/lpddr4_layout_guidelines.html
+      \endverb
+      \verb{url}
+      \verb https://docs.nxp.com/bundle/UG10149/page/topics/lpddr4_layout_guidelines.html
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

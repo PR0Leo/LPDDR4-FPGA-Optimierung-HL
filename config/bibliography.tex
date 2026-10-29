@@ -17,63 +17,91 @@
 % glossaries: Acronyms and symbols lists
 % Options: toc (in TOC), section=chapter (separate chapters), nonumberlist (no numbers)
 % acronym (extra acronym list), symbols (extra symbol list)
-\usepackage[toc, section=chapter, nonumberlist, acronym, symbols]{glossaries}
-
-% Style for glossaries: long-short format with hyperlinks
-\setglossarystyle{long}
-
-% Initialize glossaries (required for all entries)
+% ==============================================================================
+% Benötigte Packages in der Präambel Ihrer Haupt-LaTeX-Datei:
+% ==============================================================================
+\usepackage[colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue]{hyperref}
+\usepackage[automake, acronym, toc]{glossaries-extra} % oder \usepackage[acronym]{glossaries}
 \makeglossaries
+% ==============================================================================
 
-% ===== ACRONYMS / ABKÜRZUNGEN =====
-% Format: \newacronym{key}{short}{long}
-% Usage in text: \gls{key} = long (short) on first use, then (short)
-% Usage after first: \gls{key} = (short)
-\newacronym{ide}{IDE}{Integrated Development Environment}
-\newacronym{ocxo}{OCXO}{Oven Controlled Crystal Oscillator}
-\newacronym{ic}{IC}{Integrated Circuits (Integrierte Schaltkreise)}
-\newacronym{ntc}{NTC}{Negative Temperature Coefficient (Heißleiter)}
-\newacronym{gpio}{GPIO}{General Purpose Input/Output}
-\newacronym{usbc}{USB-C}{Universal Serial Bus Type-C}
-\newacronym{ufp}{UFP}{Upstream Facing Port}
-\newacronym{adc}{ADC}{Analog-to-Digital Converter (Analog-Digital-Wandler)}
-\newacronym{rms}{RMS}{Root Mean Square (Quadratischer Mittelwert)}
-\newacronym{cmos}{CMOS}{Complementary Metal-Oxide-Semiconductor}
+% Definition der Abkürzungen:
 
-% ===== SYMBOLS / SYMBOLVERZEICHNIS =====
-% Format: \newglossaryentry{key}{type=symbols, name=Symbol, description=..., symbol=Unit}
-% Usage in text: \gls{voltage} or \glssymbol{voltage} for unit only
-\newglossaryentry{voltage}{
-    type=symbols,
-    name=$U$,
-    description={Elektrische Spannung; Potentialdifferenz zwischen zwei Punkten},
-    symbol={V}
-}
+\newacronym{dram}{DRAM}{Dynamic Random-Access Memory}
+\newacronym{gpu}{GPU}{Graphics Processing Unit}
+\newacronym{ki}{KI}{Künstliche Intelligenz}
+\newacronym{fpga}{FPGA}{Field Programmable Gate Array}
+\newacronym{lpddr4}{LPDDR4}{Low Power Double Data Rate 4}
+\newacronym{ibis}{IBIS}{Input/Output Buffer Information Specification}
+\newacronym{si}{SI}{Signal Integrität}
+\newacronym{pcb}{PCB}{Printed Circuit Board}
+\newacronym{jedec}{JEDEC}{Joint Electron Device Engineering Council}
+\newacronym{soc}{SoC}{System on Chip}
+\newacronym{issi}{ISSI}{Integrated Silicon Solution Inc.}
+\newacronym{odt}{ODT}{On-Die Termination}
+\newacronym{pvt}{PVT}{Process, Voltage, Temperature}
+\newacronym{drc}{DRC}{Design Rule Checking}
+\newacronym{gnd}{GND}{Ground}
+\newacronym{cad}{CAD}{Computer-Aided Design}
+\newacronym{ic}{IC}{Integrated Circuit}
+\newacronym{dll}{DLL}{Delay-Locked Loop}
+% \usepackage[toc, section=chapter, nonumberlist, acronym, symbols]{glossaries}
 
-\newglossaryentry{resistance}{
-    type=symbols,
-    name=$R$,
-    description={Elektrischer Widerstand; Widerstand gegen Stromfluss},
-    symbol={$\Omega$}
-}
+% % Style for glossaries: long-short format with hyperlinks
+% \setglossarystyle{long}
 
-\newglossaryentry{current}{
-    type=symbols,
-    name=$I$,
-    description={Elektrische Stromstärke; Menge der Ladung pro Zeiteinheit},
-    symbol={A}
-}
+% % Initialize glossaries (required for all entries)
+% \makeglossaries
 
-\newglossaryentry{power}{
-    type=symbols,
-    name=$P$,
-    description={Elektrische Leistung; Energieumsatz pro Zeiteinheit},
-    symbol={W}
-}
+% % ===== ACRONYMS / ABKÜRZUNGEN =====
+% % Format: \newacronym{key}{short}{long}
+% % Usage in text: \gls{key} = long (short) on first use, then (short)
+% % Usage after first: \gls{key} = (short)
+% \newacronym{ide}{IDE}{Integrated Development Environment}
+% \newacronym{ocxo}{OCXO}{Oven Controlled Crystal Oscillator}
+% \newacronym{ic}{IC}{Integrated Circuits (Integrierte Schaltkreise)}
+% \newacronym{ntc}{NTC}{Negative Temperature Coefficient (Heißleiter)}
+% \newacronym{gpio}{GPIO}{General Purpose Input/Output}
+% \newacronym{usbc}{USB-C}{Universal Serial Bus Type-C}
+% \newacronym{ufp}{UFP}{Upstream Facing Port}
+% \newacronym{adc}{ADC}{Analog-to-Digital Converter (Analog-Digital-Wandler)}
+% \newacronym{rms}{RMS}{Root Mean Square (Quadratischer Mittelwert)}
+% \newacronym{cmos}{CMOS}{Complementary Metal-Oxide-Semiconductor}
 
-\newglossaryentry{frequency}{
-    type=symbols,
-    name=$f$,
-    description={Frequenz; Anzahl der Schwingungen pro Sekunde},
-    symbol={Hz}
-}
+% % ===== SYMBOLS / SYMBOLVERZEICHNIS =====
+% % Format: \newglossaryentry{key}{type=symbols, name=Symbol, description=..., symbol=Unit}
+% % Usage in text: \gls{voltage} or \glssymbol{voltage} for unit only
+% \newglossaryentry{voltage}{
+%     type=symbols,
+%     name=$U$,
+%     description={Elektrische Spannung; Potentialdifferenz zwischen zwei Punkten},
+%     symbol={V}
+% }
+
+% \newglossaryentry{resistance}{
+%     type=symbols,
+%     name=$R$,
+%     description={Elektrischer Widerstand; Widerstand gegen Stromfluss},
+%     symbol={$\Omega$}
+% }
+
+% \newglossaryentry{current}{
+%     type=symbols,
+%     name=$I$,
+%     description={Elektrische Stromstärke; Menge der Ladung pro Zeiteinheit},
+%     symbol={A}
+% }
+
+% \newglossaryentry{power}{
+%     type=symbols,
+%     name=$P$,
+%     description={Elektrische Leistung; Energieumsatz pro Zeiteinheit},
+%     symbol={W}
+% }
+
+% \newglossaryentry{frequency}{
+%     type=symbols,
+%     name=$f$,
+%     description={Frequenz; Anzahl der Schwingungen pro Sekunde},
+%     symbol={Hz}
+% }
