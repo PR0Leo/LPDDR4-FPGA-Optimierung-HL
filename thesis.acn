@@ -1,5 +1,6 @@
 \glossaryentry{JEDEC?\glossentry{jedec}|setentrycounter[]{page}"\glsnumberformat}{i}
-\glossaryentry{LPDDR4?\glossentry{lpddr4}|setentrycounter[]{page}"\glsnumberformat}{ii}
+\glossaryentry{ISSI?\glossentry{issi}|setentrycounter[]{page}"\glsnumberformat}{i}
+\glossaryentry{LPDDR4?\glossentry{lpddr4}|setentrycounter[]{page}"\glsnumberformat}{iii}
 \glossaryentry{DRAM?\glossentry{dram}|setentrycounter[]{page}"\glsnumberformat}{1}
 \glossaryentry{GPU?\glossentry{gpu}|setentrycounter[]{page}"\glsnumberformat}{1}
 \glossaryentry{KI?\glossentry{ki}|setentrycounter[]{page}"\glsnumberformat}{1}
@@ -64,7 +65,6 @@
 \glossaryentry{FPGA?\glossentry{fpga}|setentrycounter[]{page}"\glsnumberformat}{9}
 \glossaryentry{IBIS?\glossentry{ibis}|setentrycounter[]{page}"\glsnumberformat}{9}
 \glossaryentry{FPGA?\glossentry{fpga}|setentrycounter[]{page}"\glsnumberformat}{10}
-\glossaryentry{SoC?\glossentry{soc}|setentrycounter[]{page}"\glsnumberformat}{10}
 \glossaryentry{ISSI?\glossentry{issi}|setentrycounter[]{page}"\glsnumberformat}{10}
 \glossaryentry{DRAM?\glossentry{dram}|setentrycounter[]{page}"\glsnumberformat}{10}
 \glossaryentry{DRAM?\glossentry{dram}|setentrycounter[]{page}"\glsnumberformat}{10}
@@ -90,3 +90,5 @@
 \glossaryentry{JEDEC?\glossentry{jedec}|setentrycounter[]{page}"\glsnumberformat}{15}
 \glossaryentry{LPDDR4?\glossentry{lpddr4}|setentrycounter[]{page}"\glsnumberformat}{16}
 \glossaryentry{IBIS?\glossentry{ibis}|setentrycounter[]{page}"\glsnumberformat}{16}
+\glossaryentry{PCB?\glossentry{pcb}|setentrycounter[]{page}"\glsnumberformat}{16}
+\glossaryentry{ISSI?\glossentry{issi}|setentrycounter[]{page}"\glsnumberformat}{37}

@@ -35,13 +35,15 @@
       \strng{authornamehash}{23d1ecadf01f950e454bfecd012af157}
       \strng{authorfullhash}{23d1ecadf01f950e454bfecd012af157}
       \strng{authorfullhashraw}{23d1ecadf01f950e454bfecd012af157}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Online; abgerufen am 20. Oktober 2024}
       \field{title}{DRAM Shortage and AI Impact}
-      \field{year}{2024}
+      \field{urlday}{30}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://spectrum.ieee.org/dram-shortage
       \endverb
@@ -63,13 +65,15 @@
       \strng{authornamehash}{e2b4a5847320f16617f60880b1151e53}
       \strng{authorfullhash}{e2b4a5847320f16617f60880b1151e53}
       \strng{authorfullhashraw}{e2b4a5847320f16617f60880b1151e53}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Online-Ressource}
       \field{title}{Field Programmable Gate Arrays Explained}
-      \field{year}{2021}
+      \field{urlday}{30}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://files.digilent.com/reference/Field_Programmable_Gate_Arrays_Explained.pdf
       \endverb
@@ -91,13 +95,15 @@
       \strng{authornamehash}{dca8c041571bdf2a7857fa9add731507}
       \strng{authorfullhash}{dca8c041571bdf2a7857fa9add731507}
       \strng{authorfullhashraw}{dca8c041571bdf2a7857fa9add731507}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Siemens EDA Support Forum}
       \field{title}{DDR Simulation on Clock Enable and Measurement Location}
-      \field{year}{2023}
+      \field{urlday}{30}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://community.sw.siemens.com/s/question/0D54O0000859slZSAQ/ddr-simulation-on-clock-enable-and-measurement-location
       \endverb
@@ -109,21 +115,99 @@
       \list{organization}{1}{%
         {Alliance Memory}%
       }
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labeltitlesource}{title}
-      \field{note}{Datenblatt Spezifikation}
       \field{title}{LPDDR4 SDRAM Datasheet (3200 Mbps / 1600 MHz)}
+      \field{urlday}{30}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.mouser.de/datasheet/3/893/1/AllianceMemory_LPDDR4_2G_4G_8Gx16bitx32bit1600MHZ_March2021_V1p1_02Apr20.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.mouser.de/datasheet/3/893/1/AllianceMemory_LPDDR4_2G_4G_8Gx16bitx32bit1600MHZ_March2021_V1p1_02Apr20.pdf
+      \endverb
     \endentry
     \entry{xilinx_zynq_ds}{manual}{}{}
       \list{organization}{1}{%
         {Xilinx / Advanced Micro Devices, Inc.}%
       }
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labeltitlesource}{title}
-      \field{note}{DS925}
-      \field{title}{Zynq UltraScale+ MPSoC Data Sheet: DC and AC Switching Characteristics (Speed Grade -1)}
+      \field{title}{Zynq UltraScale+ MPSoC Data Sheet}
+      \field{urlday}{30}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://docs.amd.com/api/khub/documents/sbPbXcMUiRSJ2O5STvuGNQ/content
+      \endverb
+      \verb{url}
+      \verb https://docs.amd.com/api/khub/documents/sbPbXcMUiRSJ2O5STvuGNQ/content
+      \endverb
+    \endentry
+    \entry{am}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=892f0b833dcced8ed33c0eb2be824ea3}{%
+           family={{Alliance Memory}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{892f0b833dcced8ed33c0eb2be824ea3}
+      \strng{fullhash}{892f0b833dcced8ed33c0eb2be824ea3}
+      \strng{fullhashraw}{892f0b833dcced8ed33c0eb2be824ea3}
+      \strng{bibnamehash}{892f0b833dcced8ed33c0eb2be824ea3}
+      \strng{authorbibnamehash}{892f0b833dcced8ed33c0eb2be824ea3}
+      \strng{authornamehash}{892f0b833dcced8ed33c0eb2be824ea3}
+      \strng{authorfullhash}{892f0b833dcced8ed33c0eb2be824ea3}
+      \strng{authorfullhashraw}{892f0b833dcced8ed33c0eb2be824ea3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{2Gb, 4Gb, 8Gb LPDDR4/LPDDR4X SDRAM Datasheet}
+      \field{urlday}{30}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.mouser.de/datasheet/3/893/1/AllianceMemory_LPDDR4_2G_4G_8Gx16bitx32bit1600MHZ_March2021_V1p1_02Apr20.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.mouser.de/datasheet/3/893/1/AllianceMemory_LPDDR4_2G_4G_8Gx16bitx32bit1600MHZ_March2021_V1p1_02Apr20.pdf
+      \endverb
+    \endentry
+    \entry{rs}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=617503f92c81ed082c208b4583de2105}{%
+           family={{Rohde \& Schwarz}},
+           familyi={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{617503f92c81ed082c208b4583de2105}
+      \strng{fullhash}{617503f92c81ed082c208b4583de2105}
+      \strng{fullhashraw}{617503f92c81ed082c208b4583de2105}
+      \strng{bibnamehash}{617503f92c81ed082c208b4583de2105}
+      \strng{authorbibnamehash}{617503f92c81ed082c208b4583de2105}
+      \strng{authornamehash}{617503f92c81ed082c208b4583de2105}
+      \strng{authorfullhash}{617503f92c81ed082c208b4583de2105}
+      \strng{authorfullhashraw}{617503f92c81ed082c208b4583de2105}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Triggering Read and Write Cycles of DDR3 Memories}
+      \field{urlday}{30}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.rohde-schwarz.com/us/applications/triggering-read-and-write-cycles-of-ddr3-memories_56279-580225.html
+      \endverb
+      \verb{url}
+      \verb https://www.rohde-schwarz.com/us/applications/triggering-read-and-write-cycles-of-ddr3-memories_56279-580225.html
+      \endverb
     \endentry
     \entry{lpddr_notes}{misc}{}{}
       \name{author}{1}{}{%
@@ -141,12 +225,15 @@
       \strng{authornamehash}{c776788fb41c166d6bb6e2113cf5b867}
       \strng{authorfullhash}{c776788fb41c166d6bb6e2113cf5b867}
       \strng{authorfullhashraw}{c776788fb41c166d6bb6e2113cf5b867}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{LPDDR Notes and Write Mask Features}
-      \field{year}{2023}
+      \field{urlday}{30}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.scribd.com/document/888023285/LPDDR-myNotes
       \endverb
@@ -168,12 +255,15 @@
       \strng{authornamehash}{5ebf5ff2b0a6faca0674f1d7319b28d2}
       \strng{authorfullhash}{5ebf5ff2b0a6faca0674f1d7319b28d2}
       \strng{authorfullhashraw}{5ebf5ff2b0a6faca0674f1d7319b28d2}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{IBIS Frequently Asked Questions (FAQ)}
-      \field{year}{2023}
+      \field{urlday}{30}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://ibis.org/faq/#_1
       \endverb
@@ -195,12 +285,15 @@
       \strng{authornamehash}{319fa2501b38a46469102b678a9e4338}
       \strng{authorfullhash}{319fa2501b38a46469102b678a9e4338}
       \strng{authorfullhashraw}{319fa2501b38a46469102b678a9e4338}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{UltraScale MPSoC DDR Controller Settings and IBIS Simulation}
-      \field{year}{2023}
+      \field{urlday}{30}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://xilinx-wiki.atlassian.net/wiki/spaces/A/pages/747012338/UltraScale+UltraScale+MPSoC+DDR+Controller+Settings+and+IBIS+Simulation#Leveling-and-Calibration
       \endverb
@@ -222,13 +315,12 @@
       \strng{authornamehash}{6379fe8fc13bb37619b478c08b903e9c}
       \strng{authorfullhash}{6379fe8fc13bb37619b478c08b903e9c}
       \strng{authorfullhashraw}{6379fe8fc13bb37619b478c08b903e9c}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Glossar-Eintrag}
       \field{title}{What is JEDEC? The Organization Behind Memory Standards}
-      \field{urlday}{29}
+      \field{urlday}{30}
       \field{urlmonth}{10}
       \field{urlyear}{2026}
       \field{urldateera}{ce}
@@ -246,9 +338,11 @@
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labeltitlesource}{title}
-      \field{number}{UG10149}
       \field{title}{LPDDR4 Board Design and Layout Guidelines}
-      \field{year}{2022}
+      \field{urlday}{30}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://docs.nxp.com/bundle/UG10149/page/topics/lpddr4_layout_guidelines.html
       \endverb
